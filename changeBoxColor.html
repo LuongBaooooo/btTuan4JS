@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doi mau div</title>
+    <script language="Javascript">
+        function changeColor(){
+            const boxes = document.querySelectorAll(".box");
+            var n = boxes.length;
+            for(var i = 0 ; i < n; i++){
+                var name = boxes[i].getAttribute("name");
+                if(name === "le"){
+                    boxes[i].style.backgroundColor = "red";
+                }
+                else{
+                    boxes[i].style.backgroundColor = "blue";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #d4d0d4;
+        text-align: center;
+    }
+    
+    .container {
+        margin-top: 50px;
+    }
+    button{
+        margin-left: 10px;
+    }
+    .box {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        margin-top: 20px;
+        background-color: rgb(77, 77, 125);
+    }
+    </style>
+    <div><button id="changeColorButton" onclick="changeColor();">Thay đổi màu nền</button></div>
+    <div class="box" name="le"></div>
+    <div class="box" name="chan"></div>
+    <div class="box" name="le"></div>
+    <div class="box" name="chan"></div>
+    <div class="box" name="le"></div>
+    <div class="box" name="chan"></div>
+    <div class="box" name="le"></div>
+    <div class="box" name="chan"></div>
+    <div class="box" name="le"></div>
+    <div class="box" name="chan"></div>
+</body>
+</html>

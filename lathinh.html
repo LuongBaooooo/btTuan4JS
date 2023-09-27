@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò chơi lật hình</title>
+    <style>
+        .square {
+            width: 200px;
+            height: 200px;
+            background-color: #7a1616; 
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+        .hidden {
+            background-color: transparent;
+        }
+        td, tr {
+            border: 1px solid black; 
+            padding: 0; 
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+    <h1>Trò chơi lật hình</h1>
+    <div style="background-image: url(Images/makima1.jpg); background-repeat: no-repeat; width: 390px; background-position-x: 50%;">
+    <table cellspacing="0" cellpadding="0">
+        <tr style="width: 200px;">
+            <td class="square" onclick="flip(this)"></td>
+            <td class="square" onclick="flip(this)"></td>
+        </tr>
+        <tr style="width: 200px;">
+            <td class="square" onclick="flip(this)"></td>
+            <td class="square" onclick="flip(this)"></td>
+        </tr>
+    </table>
+    </div>
+    </div>
+    <script>
+        function flip(square) {
+            square.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

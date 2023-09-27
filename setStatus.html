@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="Javascript">
+        function change(){
+            var backColor = document.getElementById('MauNen').value;
+            var chuColor = document.getElementById('MauChu').value;
+            var documentTitle = document.getElementById('TieuDe').value;
+            var documentStatus = document.getElementById('TrangThai').value;
+
+            document.body.style.backgroundColor = backColor;
+            document.body.style.color = chuColor;
+            document.title = documentTitle;
+            window.status = documentStatus;
+        }
+    </script>
+</head>
+<body>
+    <label for="MauNen">Màu Nền:</label>
+    <input type="text" id="MauNen" placeholder="Màu Nền">
+
+    <label for="MauChu">Màu Chữ:</label>
+    <input type="text" id="MauChu" placeholder="Màu Chữ">
+
+    <label for="TieuDe">Tiêu Đề:</label>
+    <input type="text" id="TieuDe" placeholder="Tiêu Đề">
+
+    <label for="TrangThai">Trạng Thái:</label>
+    <input type="text" id="TrangThai" placeholder="Trạng Thái">
+
+    <button id="ThayDoi" onclick="change();">Thay Đổi</button>
+</body>
+</html>

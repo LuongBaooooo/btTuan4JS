@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bật 2</title>
+    <script language="Javascript">
+        function pt(){
+            var a = parseFloat(document.getElementById('hesoa').value);
+            var b = parseFloat(document.getElementById('hesob').value);
+            var c = parseFloat(document.getElementById('hesoc').value);
+
+            var delta = (b*b) - (4*a*c);
+
+            if(delta < 0){
+                alert("Phương trình vô nghiệm");
+            }
+            if(delta === 0){
+                var x = -b / (2 * a);
+                alert("Phương trình có nghiệm kép kết quả là x1 = x2 = " + x);
+            }
+            if(delta > 0){
+                var x1 = (-b + Math.sqrt(delta))/(2 * a);
+                var x2 = (-b - Math.sqrt(delta))/ (2 * a);
+                alert("Phương trình có 2 nghiệm phân biệt x1 " + x1 + " x2 = " + x2);
+            }
+        }
+    </script>
+</head>
+<body>
+    <label>Nhập a: </label>
+    <input id="hesoa" type="text" placeholder="Nhập a"><br>
+    <label>Nhập b: </label>
+    <input id="hesob" type="text" placeholder="Nhập b"><br>
+    <label>Nhập c: </label>
+    <input id="hesoc" type="text" placeholder="Nhập c"><br>
+    <button id="giaipt" onclick="pt();">Giải phương trình</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in so</title>
+    <script language="Javascript">
+        function output(){
+            var n = document.getElementById('inputNumber').value;
+            for(var i = 1; i < n; i++){
+                document.write(i + " ");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h2>Hay nhap con so ban muon vao day: </h2>
+        <input type="text" id="inputNumber" placeholder="Vui long nhap gia tri">
+        <button id="printNumber" onclick="output()">In chu so</button>
+    </form>
+</body>
+</html>

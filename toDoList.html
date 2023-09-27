@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <script language="Javascript">
+        var a = [];
+        function addTask(){
+            var toDoList = document.getElementById('toDoList');
+            var inputTask = document.getElementById('toDo').value;
+            if(inputTask.trim() != ""){
+                a.push(inputTask);
+                document.getElementById('toDo').value = "";
+            }
+            displayTasks();
+        }
+        function deleteTask(){
+            var toDoList = document.getElementById('toDoList');
+            var deleteTask = parseInt(document.getElementById('toDelete').value);
+            a.splice(deleteTask - 1, 1);
+            displayTasks();
+        }
+        function displayTasks(){
+        var toDoList = document.getElementById('toDoList');
+        toDoList.innerHTML = "";
+        for (var i = 0; i < a.length; i++) {
+            var taskItem = document.createElement("div");
+            taskItem.textContent = i + 1 + ". " + a[i];
+            toDoList.appendChild(taskItem);
+        }
+    }
+    </script>
+</head>
+<body>
+    <style>
+        #toDoList{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            text-align: center;
+        }
+    </style>
+    <div align="center">
+    <input style ="font-size: 25px; background-color: rgb(2, 28, 77); color: gray" type="text" id="toDo" placeholder="Enter task">
+    <button style ="font-size: 25px; width: 40px; background-color: aqua;" onclick="addTask();">+</button><br><br>
+    <input style ="font-size: 25px; background-color: rgb(2, 28, 77); color: gray" type="text" id="toDelete" placeholder="Enter index of delete task">
+    <button style ="font-size: 25px; width: 40px; background-color: aqua;" onclick="deleteTask();">-</button>
+    </div>
+    <div align="center" style="padding-top: 100px;">
+        <h1>DANH SÁCH TO DO LIST</h1>
+    <fieldset id="toDoList" style ="width: 40%; background-color: aquamarine;"></fieldset>
+    </div>
+</body>
+</html>
